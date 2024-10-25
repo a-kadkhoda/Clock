@@ -4,20 +4,19 @@ import { useState } from "react";
 
 const Classic = () => {
   const [time, setTime] = useState(new Date());
-  const clockRef = useRef(null)
   useEffect(() => {
-
+    setInterval(() => {
+      setTime(new Date());
+    }, 1000);
 
     return()=>{
         
     }
   }, []);
 
-  const Clock = ()=>{
-    clockRef.current = setInterval(() => {
-        setTime(new Date());
-      }, 1000);
-  }
+
+
+ 
 
   return (
     <>
